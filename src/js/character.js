@@ -1,4 +1,6 @@
 export default class Character {
+  #type;
+
   constructor(name, type) {
     const types = [
       'Bowerman',
@@ -13,13 +15,17 @@ export default class Character {
       this.name = name;
     } else { throw new Error('Имя должно быть от 2 до 10 символов'); }
     if (types.includes(type)) {
-      this.type = type;
+      this.#type = type;
     } else { throw new Error('Не верный класс персонажа'); }
 
     this.health = 100;
     this.level = 1;
     this.attack = null;
     this.defense = null;
+  }
+
+  getType() {
+    return this.#type;
   }
 
   levelUp() {

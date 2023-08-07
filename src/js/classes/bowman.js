@@ -7,3 +7,4 @@ export default class Bowman extends Character {
     this.defense = 25;
   }
 }
+
