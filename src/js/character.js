@@ -24,7 +24,7 @@ export default class Character {
     this.defense = null;
   }
 
-  getType() {
+  get getType() {
     return this.#type;
   }
 

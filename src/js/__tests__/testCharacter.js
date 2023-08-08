@@ -71,3 +71,8 @@ test('test damage Error ', () => {
   char.health = -5;
   expect(() => char.damage(50)).toThrow('Персонаж мертв');
 });
+
+test('test get class ', () => {
+  const char = new Character('test', 'Daemon');
+  expect(char.getType).toBe('Daemon');
+});
